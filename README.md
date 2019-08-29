@@ -8,7 +8,14 @@ _Reference_: https://github.com/kabutz/Transmogrifier
 _Reference_: http://www.java2s.com/Tutorials/Java/Socket/How_to_use_Java_SocketChannel_create_a_HTTP_client.htm  
 _Reference_: https://www.youtube.com/watch?v=3m9RN4aDh08
 
-# introduction
+# project description
+* the main goal of this project is to show how to implement single-threaded non-blocking server using `java.nio`
+* in the workshop we will try to fix failing tests from `test/workshop` package by following steps and hints in
+`java/workshop` package
+* answers: `java/answers` package
+
+# theory in a nutshell
+## introduction
 * current JVMs run bytecode at speeds approaching that of natively compiled code or even better (dynamic 
 runtime optimizations), so
     * applications are no longer CPU bound (spending most of their time executing code) 
@@ -31,7 +38,7 @@ runtime optimizations), so
     * `RandomAccessFile` with array-based `read( )` and `write( )` are pretty close to the underlying 
     operating-system calls (although at least one buffer copy)
 
-# Buffer Handling
+## Buffer Handling
 * buffers, and how buffers are handled, are the basis of all I/O
 * "input/output" means nothing more than moving data in and out of buffers
 * processes perform I/O by requesting operating system to:
@@ -60,7 +67,7 @@ runtime optimizations), so
     physical address as a virtual address in user space, the DMA hardware (which can access only physical 
     memory addresses) can fill a buffer that is simultaneously visible to both the kernel and a user space process
     
-# Channels
+## Channels
 * is a conduit to an I/O service (a hardware device, a file or socket) and provides methods for 
 interacting with that service
 * socket channel objects are bidirectional
@@ -69,7 +76,7 @@ interacting with that service
 the state of that connection 
 * when a channel is closed - connection is lost
 
-# Socket Channels
+## Socket Channels
 * models network sockets
 * can operate in nonblocking mode and are selectable
 * it's no longer necessary to dedicate a thread to each socket connection 
