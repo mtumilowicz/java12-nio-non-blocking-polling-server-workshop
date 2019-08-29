@@ -10,11 +10,11 @@ import java.util.function.UnaryOperator;
 /**
  * Created by mtumilowicz on 2019-07-21.
  */
-public class ClientConnectionAnswer implements Runnable {
+public class Step1_ClientConnectionAnswer implements Runnable {
     private final SocketChannel client;
     private final ByteBuffer buf;
 
-    ClientConnectionAnswer(SocketChannel client) {
+    Step1_ClientConnectionAnswer(SocketChannel client) {
         this.client = client;
         this.buf = ByteBuffer.allocateDirect(80);
     }

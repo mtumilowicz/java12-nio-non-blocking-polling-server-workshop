@@ -6,10 +6,10 @@ import java.nio.channels.ServerSocketChannel;
 /**
  * Created by mtumilowicz on 2019-07-31.
  */
-public abstract class NonBlockingServerWorkshop {
+public abstract class Step3_NonBlockingServerWorkshop {
     protected final int port;
 
-    public NonBlockingServerWorkshop(int port) {
+    public Step3_NonBlockingServerWorkshop(int port) {
         this.port = port;
     }
 

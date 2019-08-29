@@ -6,7 +6,7 @@ import java.util.List;
 
 import static java.util.function.Predicate.not;
 
-class ClientsAnswer {
+class Step2_ClientsAnswer {
     private final List<SocketChannel> clients = new ArrayList<>();
 
     void add(SocketChannel client) {
@@ -16,7 +16,7 @@ class ClientsAnswer {
     void handleConnected() {
         clients.stream()
                 .filter(SocketChannel::isConnected)
-                .forEach(sc -> handle(new ClientConnectionAnswer(sc)));
+                .forEach(sc -> handle(new Step1_ClientConnectionAnswer(sc)));
     }
 
     void removeNotConnected() {

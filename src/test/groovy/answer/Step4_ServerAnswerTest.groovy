@@ -1,22 +1,21 @@
-package workshop
+package answer
 
-import answer.ServerAnswer
 import client.TestClient
 import spock.lang.Specification
 
 /**
  * Created by mtumilowicz on 2019-07-23.
  */
-class ServerWorkshopTest extends Specification {
+class Step4_ServerAnswerTest extends Specification {
 
     def expectedClientOutput = ["send: xxx", "received: xxx"]
 
-    def "SingleThreadedPollingNonBlockingServerAnswer"() {
+    def "Step4_ServerAnswer"() {
         given:
         def port = 1
 
         expect:
-        expectedClientOutput == extractClientOutputFor(port, new ServerWorkshop(port))
+        expectedClientOutput == extractClientOutputFor(port, new Step4_ServerAnswer(port))
     }
     
     def extractClientOutputFor(port, server) {

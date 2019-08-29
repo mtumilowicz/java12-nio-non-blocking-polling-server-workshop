@@ -1,4 +1,5 @@
-package answer
+package workshop
+
 
 import client.TestClient
 import spock.lang.Specification
@@ -6,16 +7,16 @@ import spock.lang.Specification
 /**
  * Created by mtumilowicz on 2019-07-23.
  */
-class ServerAnswerTest extends Specification {
+class Step4_ServerWorkshopTest extends Specification {
 
     def expectedClientOutput = ["send: xxx", "received: xxx"]
 
-    def "SingleThreadedPollingNonBlockingServerAnswer"() {
+    def "Step4_ServerWorkshop"() {
         given:
         def port = 1
 
         expect:
-        expectedClientOutput == extractClientOutputFor(port, new ServerAnswer(port))
+        expectedClientOutput == extractClientOutputFor(port, new Step4_ServerWorkshop(port))
     }
     
     def extractClientOutputFor(port, server) {

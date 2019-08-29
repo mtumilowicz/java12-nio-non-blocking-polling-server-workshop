@@ -7,10 +7,10 @@ import java.nio.channels.ServerSocketChannel;
 /**
  * Created by mtumilowicz on 2019-07-31.
  */
-public abstract class NonBlockingServerAnswer {
+public abstract class Step3_NonBlockingServerAnswer {
     protected final int port;
 
-    public NonBlockingServerAnswer(int port) {
+    public Step3_NonBlockingServerAnswer(int port) {
         this.port = port;
     }
 

@@ -8,19 +8,19 @@ import java.util.Optional;
 /**
  * Created by mtumilowicz on 2019-07-21.
  */
-public class ServerWorkshop extends NonBlockingServerWorkshop {
+public class Step4_ServerWorkshop extends Step3_NonBlockingServerWorkshop {
 
-    public ServerWorkshop(int port) {
+    public Step4_ServerWorkshop(int port) {
         super(port);
     }
 
     public static void main(String[] args) throws IOException {
-        new ServerWorkshop(81).start();
+        new Step4_ServerWorkshop(81).start();
     }
 
     @Override
     protected void processSockets(ServerSocketChannel ssc) throws IOException {
-        var clients = new ClientsWorkshop();
+        var clients = new Step2_ClientsWorkshop();
         // spinning loop, hint: while(true)
         // accept connection and add to clients, hint: acceptConnection, ifPresent
         // handle connected, hint: client.handleConnected()

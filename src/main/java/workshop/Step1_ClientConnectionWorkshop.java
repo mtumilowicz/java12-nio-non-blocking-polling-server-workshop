@@ -7,11 +7,11 @@ import java.nio.channels.SocketChannel;
 /**
  * Created by mtumilowicz on 2019-07-21.
  */
-public class ClientConnectionWorkshop implements Runnable {
+public class Step1_ClientConnectionWorkshop implements Runnable {
     private final SocketChannel client;
     private final ByteBuffer buf;
 
-    ClientConnectionWorkshop(SocketChannel client) {
+    Step1_ClientConnectionWorkshop(SocketChannel client) {
         this.client = client;
         this.buf = ByteBuffer.allocateDirect(80);
     }
