@@ -1,4 +1,7 @@
-# java12-nio-non-blocking-polling-server-workshop
+[![Build Status](https://travis-ci.com/mtumilowicz/java12-nio-non-blocking-polling-server-workshop.svg?branch=master)](https://travis-ci.com/mtumilowicz/java12-nio-non-blocking-polling-server-workshop)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+# java12-nio-non-blocking-polling-server-workshop 
 
 _Reference_: https://www.udemy.com/java-non-blocking-io-with-javanio-and-design-patterns/  
 _Reference_: https://github.com/kabutz/Transmogrifier  
