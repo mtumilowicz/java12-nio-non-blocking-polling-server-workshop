@@ -56,8 +56,7 @@ runtime optimizations), so
     * eliminates copies between kernel and user space by mapping a kernel space address to the same 
     physical address as a virtual address in user space, the DMA hardware (which can access only physical 
     memory addresses) can fill a buffer that is simultaneously visible to both the kernel and a user space process
-
-## NIO
+    
 # Channels
 * is a conduit to an I/O service (a hardware device, a file or socket) and provides methods for 
 interacting with that service
