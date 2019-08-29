@@ -10,7 +10,7 @@ import java.util.Optional;
  */
 public class ServerWorkshop extends NonBlockingServerWorkshop {
 
-    private ServerWorkshop(int port) {
+    public ServerWorkshop(int port) {
         super(port);
     }
 
