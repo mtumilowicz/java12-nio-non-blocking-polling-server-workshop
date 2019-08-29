@@ -9,7 +9,7 @@ _Reference_: http://www.java2s.com/Tutorials/Java/Socket/How_to_use_Java_SocketC
 _Reference_: https://www.youtube.com/watch?v=3m9RN4aDh08
 
 # project description
-* the main goal of this project is to show how to implement single-threaded non-blocking server using `java.nio`
+* the main goal of this project is to show how to implement single-threaded non-blocking polling server using `java.nio`
 * in the workshop we will try to fix failing tests from `test/workshop` package by following steps and hints in
 `java/workshop` package
 * answers: `java/answers` package
