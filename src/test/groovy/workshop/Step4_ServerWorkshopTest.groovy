@@ -11,7 +11,7 @@ class Step4_ServerWorkshopTest extends Specification {
 
     def expectedClientOutput = ["send: xxx", "received: xxx"]
 
-    def "Step4_ServerWorkshop"() {
+    def "ServerWorkshop"() {
         given:
         def port = 1
 

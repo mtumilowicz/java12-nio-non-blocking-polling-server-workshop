@@ -10,7 +10,7 @@ class Step4_ServerAnswerTest extends Specification {
 
     def expectedClientOutput = ["send: xxx", "received: xxx"]
 
-    def "Step4_ServerAnswer"() {
+    def "ServerAnswer"() {
         given:
         def port = 1
 
