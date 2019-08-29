@@ -10,19 +10,19 @@ import static java.util.Objects.nonNull;
 /**
  * Created by mtumilowicz on 2019-07-21.
  */
-public class Step4_ServerAnswer extends Step3_NonBlockingServerAnswer {
+public class Step5_ServerAnswer extends Step4_NonBlockingServerAnswer {
 
-    public Step4_ServerAnswer(int port) {
+    public Step5_ServerAnswer(int port) {
         super(port);
     }
 
     public static void main(String[] args) throws IOException {
-        new Step4_ServerAnswer(81).start();
+        new Step5_ServerAnswer(81).start();
     }
 
     @Override
     protected void processSockets(ServerSocketChannel ssc) throws IOException {
-        var clients = new Step2_ClientsAnswer();
+        var clients = new Step3_ClientsAnswer();
         while (true) {
             acceptConnection(ssc).ifPresent(clients::add);
             clients.handleConnected();

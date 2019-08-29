@@ -4,7 +4,7 @@ import java.nio.channels.SocketChannel;
 import java.util.ArrayList;
 import java.util.List;
 
-class Step2_ClientsWorkshop {
+class Step3_ClientsWorkshop {
     private final List<SocketChannel> clients = new ArrayList<>();
 
     // add client to clients

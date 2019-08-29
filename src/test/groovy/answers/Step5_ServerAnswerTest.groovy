@@ -6,7 +6,7 @@ import spock.lang.Specification
 /**
  * Created by mtumilowicz on 2019-07-23.
  */
-class Step4_ServerAnswerTest extends Specification {
+class Step5_ServerAnswerTest extends Specification {
 
     def expectedClientOutput = ["send: xxx", "received: xxx"]
 
@@ -15,7 +15,7 @@ class Step4_ServerAnswerTest extends Specification {
         def port = 1
 
         expect:
-        expectedClientOutput == extractClientOutputFor(port, new Step4_ServerAnswer(port))
+        expectedClientOutput == extractClientOutputFor(port, new Step5_ServerAnswer(port))
     }
     
     def extractClientOutputFor(port, server) {

@@ -1,7 +1,5 @@
 package answers;
 
-import transformer.BufferTransformer;
-
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
@@ -10,11 +8,11 @@ import java.util.function.UnaryOperator;
 /**
  * Created by mtumilowicz on 2019-07-21.
  */
-public class Step1_ClientConnectionAnswer implements Runnable {
+public class Step2_ClientConnectionAnswer implements Runnable {
     private final SocketChannel client;
     private final ByteBuffer buf;
 
-    Step1_ClientConnectionAnswer(SocketChannel client) {
+    Step2_ClientConnectionAnswer(SocketChannel client) {
         this.client = client;
         this.buf = ByteBuffer.allocateDirect(80);
     }
@@ -40,7 +38,7 @@ public class Step1_ClientConnectionAnswer implements Runnable {
 
     private void writeBufferToClient() throws IOException {
         buf.flip();
-        BufferTransformer.transformBytes(buf, UnaryOperator.identity());
+        Step1_BufferTransformerAnswer.transformBytes(buf, UnaryOperator.identity());
         client.write(buf);
     }
 }

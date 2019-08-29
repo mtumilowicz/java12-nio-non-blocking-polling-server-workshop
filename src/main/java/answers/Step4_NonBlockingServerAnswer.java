@@ -1,24 +1,24 @@
-package workshop;
+package answers;
 
 import java.io.IOException;
+import java.net.InetSocketAddress;
 import java.nio.channels.ServerSocketChannel;
 
 /**
  * Created by mtumilowicz on 2019-07-31.
  */
-public abstract class Step3_NonBlockingServerWorkshop {
+public abstract class Step4_NonBlockingServerAnswer {
     protected final int port;
 
-    public Step3_NonBlockingServerWorkshop(int port) {
+    public Step4_NonBlockingServerAnswer(int port) {
         this.port = port;
     }
 
     public void start() throws IOException {
         log("Creating server socket on port " + port);
-        // open server socket channel, hint: ServerSocketChannel.open();
-        ServerSocketChannel ssc = null;
-        // bind to the localhost:port, hint: bind, new InetSocketAddress("localhost", port)
-        // configure non blocking, hint: configureBlocking(false)
+        ServerSocketChannel ssc = ServerSocketChannel.open();
+        ssc.bind(new InetSocketAddress("localhost", port));
+        ssc.configureBlocking(false);
         log("Created server socket on port " + port);
 
         processSockets(ssc);
